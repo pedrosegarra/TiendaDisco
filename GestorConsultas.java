@@ -18,7 +18,7 @@ public class GestorConsultas {
      * Si no existe, lo crea
      */
     public GestorConsultas() {
-        creaFichero("discos2.dat");
+        creaFichero("discosDAML.dat");
     }
 
     /**
@@ -70,7 +70,7 @@ public class GestorConsultas {
      */
     private long buscaCodigo(int codigoBuscado) {
         Disco Disco = new Disco();
-        //Escribid el código
+        //IMPLEMENTAR
     }
 
     private void posicionaFichero(long posicion) {
@@ -88,7 +88,7 @@ public class GestorConsultas {
      */
     public String[] listaAutores() {
         Disco Disco = new Disco();
-        //Escribid el código
+        //IMPLEMENTAR
     }
 
     private String[] hashArray(HashSet<String> autores) {
@@ -106,7 +106,7 @@ public class GestorConsultas {
      */
     public String[] buscaAutor(String autorBuscado) {
         Disco Disco = new Disco();
-        //Escribid el código
+        //IMPLEMENTAR
     }
 
     /**
@@ -117,7 +117,7 @@ public class GestorConsultas {
      */
     public String altaDisco(int codigoBuscado) {
         long posicion = buscaCodigo(codigoBuscado);
-        //Escribid el código
+        //IMPLEMENTAR
         return "";
     }
 
@@ -129,7 +129,7 @@ public class GestorConsultas {
      */
     public String bajaDisco(int codigoBuscado) {
         long posicion = buscaCodigo(codigoBuscado);
-        //Escribid el código
+        //IMPLEMENTAR
         return "";
     }
 
