@@ -110,16 +110,7 @@ public class Disco implements Serializable {
      * @param	stream	stream asociado al fichero
      */
     public void escribeEnFichero(RandomAccessFile stream) {
-        try {
-            stream.writeInt(codigo);
-            stream.writeUTF(titulo);
-            stream.writeUTF(autor);
-            stream.writeDouble(precio);
-            stream.writeInt(cantidad);
-        } catch (IOException e) {
-            System.out.println("Error al escribir en el fichero.");
-            System.exit(0);
-        }
+       //IMPLEMENTAR
     } // fin escribeEnFichero
 
     /**
@@ -128,11 +119,7 @@ public class Disco implements Serializable {
      * @throws	EOFException, IOException
      */
     public void leeDeFichero(RandomAccessFile stream) throws EOFException, IOException {
-        codigo = stream.readInt();
-        titulo = stream.readUTF();
-        autor = stream.readUTF();
-        precio = stream.readDouble();
-        cantidad = stream.readInt();
+       //IMPLEMENTAR
     }
 
 }
