@@ -11,7 +11,7 @@ public class Disco implements Serializable {
     /**
      * Clase que permite escribir y leer un Solucion.Disco de teclado y en un fichero de acceso directo
      */
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L; //¿Recordáis para qué sirve?
 
     private int codigo;
     private String titulo;
@@ -102,17 +102,7 @@ public class Disco implements Serializable {
      * Lee los datos de un disco de un stream de entrada
      */
     public void leeDeTeclado(Scanner teclado) {
-        System.out.println("INTRODUCE LOS DATOS DEL DISCO");
-        System.out.println("Codigo: ");
-        codigo = teclado.nextInt();
-        System.out.println("Titulo: ");
-        titulo = teclado.next();
-        System.out.println("Autor: ");
-        autor = teclado.next();
-        System.out.println("Precio:");
-        precio = teclado.nextDouble();
-        System.out.println("Cantidad: ");
-        cantidad = teclado.nextInt();
+        //IMPLEMENTAR
     } // fin leeDeTeclado
 
     /**
