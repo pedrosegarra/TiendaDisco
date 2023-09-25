@@ -70,21 +70,7 @@ public class GestorConsultas {
      */
     private long buscaCodigo(int codigoBuscado) {
         Disco Disco = new Disco();
-        long posicion = -1;
-        posicionaFichero(0);
-        do
-        {
-            try {
-                posicion = stream.getFilePointer();
-                Disco.leeDeFichero(stream);
-            } catch (EOFException e) {
-                return -1;
-            } catch (IOException e) {
-                System.out.println("Error leyendo del fichero");
-                System.exit(0);
-            }
-        } while (Disco.getCodigo() != codigoBuscado);
-        return posicion;
+        //Escribid el código
     }
 
     private void posicionaFichero(long posicion) {
@@ -102,21 +88,7 @@ public class GestorConsultas {
      */
     public String[] listaAutores() {
         Disco Disco = new Disco();
-        HashSet<String> autores = new HashSet<String>();
-        posicionaFichero(0);
-        while(true)
-        {
-            try {
-                Disco.leeDeFichero(stream);
-                autores.add(Disco.getAutor());
-            } catch (EOFException e) {
-                break;
-            } catch (IOException e) {
-                System.out.println("Error leyendo del fichero.");
-                System.exit(0);
-            }
-        }
-        return hashArray(autores);
+        //Escribid el código
     }
 
     private String[] hashArray(HashSet<String> autores) {
@@ -134,24 +106,7 @@ public class GestorConsultas {
      */
     public String[] buscaAutor(String autorBuscado) {
         Disco Disco = new Disco();
-        HashSet<String> libros = new HashSet<String>();
-        posicionaFichero(0);
-        while(true)
-        {
-            try {
-                Disco.leeDeFichero(stream);
-                if (autorBuscado.equals(Disco.getAutor()))
-                {
-                    libros.add(Disco.toString());
-                }
-            } catch (EOFException e) {
-                break;
-            } catch (IOException e) {
-                System.out.println("Error leyendo del fichero");
-                System.exit(0);
-            }
-        }
-        return hashArray(libros);
+        //Escribid el código
     }
 
     /**
@@ -162,22 +117,7 @@ public class GestorConsultas {
      */
     public String altaDisco(int codigoBuscado) {
         long posicion = buscaCodigo(codigoBuscado);
-        if (posicion != -1) {
-            posicionaFichero(posicion);
-            Disco Disco = new Disco();
-            try {
-                Disco.leeDeFichero(stream);
-                Disco.setCantidad(Disco.getCantidad() + 1);
-                posicionaFichero(posicion);
-                Disco.escribeEnFichero(stream);
-                return Disco.toString();
-            } catch (EOFException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                System.out.println("Error escribiendo el fichero");
-                System.exit(0);
-            }
-        }
+        //Escribid el código
         return "";
     }
 
@@ -189,36 +129,7 @@ public class GestorConsultas {
      */
     public String bajaDisco(int codigoBuscado) {
         long posicion = buscaCodigo(codigoBuscado);
-        if (posicion != -1) {
-            posicionaFichero(posicion);
-            Disco Disco = new Disco();
-            try {
-                Disco.leeDeFichero(stream);
-                if (Disco.getCantidad() > 0)
-                {
-                    Disco.setCantidad(Disco.getCantidad() - 1);
-                    posicionaFichero(posicion);
-                    Disco.escribeEnFichero(stream);
-                    if (Disco.getCantidad() == 0)
-                    {
-                        return ("Se han agotado las unidades de este disco.\n" + Disco.toString());
-                    }
-                    else
-                    {
-                        return Disco.toString();
-                    }
-                }
-                else
-                {
-                    return ("No quedan ejemplares del disco.\n" + Disco.toString());
-                }
-            } catch (EOFException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                System.out.println("Error escribiendo el fichero");
-                System.exit(0);
-            }
-        }
+        //Escribid el código
         return "";
     }
 
